@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>What's your Mood?</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .button {
+            background-color:#C70039;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 7px 3px;
+            width: 70%;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+
+        }
+        .button:active{
+            transform:  translateY(4px);
+            
+        }
+        .button:hover{
+            background-color: #B00033;
+            color: lightpink;
+            
+        }
+        
+        /* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 804px;
+    background-color: white;
+    background-image: url('assets/img/food.jpg');
+    
+  height: 806px;
+    background-size: cover;
+    background-repeat: no-repeat;
+/*    opacity: 80%;*/
+}
+
+
+    </style>
+</head>
+
+<body>
+
+     <center>
+    <div class="container">
+<!--  <img src="images/eventbg.png" alt="Snow">-->
+<!--  <button class="btn">Button</button>-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="button" onclick="window.location.href='inner-page.html';">Select your mood</button><br>
+        <button onclick="geekAlert()'" class="button">Let us determine your mood!</button><br>
+         <p id="geek"></p>
+</div>
+   <script>
+            function geekAlert() {
+                var x;
+                if (confirm("Do you allow CraveBell to use camera?") == true) {
+                    x = "OK pressed!";
+                } else {
+                    x = "Cancel!";
+                }
+                document.getElementById("geek").innerHTML = x;
+            
+            }
+        </script> 
+        
+        
+    </center>
+</body>
+
+</html>
