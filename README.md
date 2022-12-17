@@ -1,12 +1,21 @@
-# CraveBell
+# CraveBell - A mood-based food recommendation system
 The aim of this system is to give food suggestions to the user according to his/her mood and map the users’ choice of food to the place where they can be availed the best. With a vast variety of food and an overwhelming number of restaurants providing those dishes, its common to face a tough time to decide what to eat. Our system would try to help the user to select the food that he/she would like to order and would also suggest the preferable restaurants serving those dishes.
 
-# 1. Methodology
+## Methodology
 ![image](https://user-images.githubusercontent.com/75696894/208227268-4e4af461-1ae3-419c-90a5-5319191b5852.png)
 
-#2. Description
-Dataset used: Zomato India Dataset
+## Working and Implementation
+Dataset used: Zomato Restaurant Dataset
+Model used: Logistic Regression
+•The major feature of our project which sets it apart from the traditional apps of its kind needs three parameters to order the list of recommended restaurants with the highly recommended restaurant at the top. These three features are the user ratings, cost for two people and the restaurant's distance from the user.
+•Whenever any user orders from a certain restaurant, he/she is asked to rate the restaurant out of 5. The rating of that restaurant is then dynamically updated using the mathematical average of the current rating and the new rating. This computation also requires the storage of the number of ratings for a particular restaurant.
+•The cost for two people is permanently stored initially when a restaurant is added to the database.
+•To compute the distance of the user from a restaurant, we have stored the geocode of all the restaurants in the database. We have used the Google Maps API to extract the user's geocode and hence compute his/her distance.
+A very simple model of machine learning, that is logistic regression is used to implement the same. When the user chooses a certain restaurant among the recommended restaurants, then his/her choice to select a certain restaurant and discard other restaurants is used to train the model which only increases the accuracy of the algorithm.
+•The USP of our project, which is recommending the users food items based on their mood works on previous users' inputs only. Whenever any user orders from a certain restaurant, he/she is asked to specify what his/her mood was before he/she had ordered. His/Her order and mood is used to train the algorithm which gradually increases its accuracy.
+•To help small businesses expand their reach by selling on our application, we have simply provided them with a form wherein they can fill out the necessary details.
 
+## Screenshots of the Interface
 
 ![image](https://user-images.githubusercontent.com/75696894/167893343-6ac6bc12-3208-4667-8536-3f4507603b3b.png)
 
